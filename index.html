@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flower Studio</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-left">
+        <button class="menu-btn">
+          <img src="images/icon-menu.png" alt="Menu" />
+        </button>
+        <a href="#">About Us</a>
+        <a href="#">Catalog</a>
+        <a href="#">Contacts</a>
+      </div>
+      <div class="logo">FLOWER STUDIO</div>
+      <div class="nav-right">
+        <button><img src="images/icon-search.png" alt="Search" /></button>
+        <button><img src="images/icon-heart.png" alt="Favorites" /></button>
+        <button><img src="images/icon-user.png" alt="Profile" /></button>
+        <button><img src="images/icon-cart.png" alt="Cart" /></button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Discover Timeless Beauty in Every Bloom</h1>
+        <div class="text-block">
+          <img
+            class="small-image"
+            src="images/roses-small.jpg"
+            alt="Soft pink roses"
+          />
+          <div class="copy">
+            <p>
+              Brighten your day with fresh, vibrant arrangements crafted with
+              care and creativity. From everyday bouquets to special occasion
+              florals, we bring nature’s beauty straight to you. Explore unique
+              designs that make every moment memorable.
+            </p>
+            <a href="#" class="btn">Our Catalog →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="images/roses-large.jpg"
+          alt="Elegant red & white rose arrangement"
+        />
+        <button class="arrow next">
+          <img src="images/icon-arrow-right.svg" alt="Next slide" />
+        </button>
+      </div>
+
+      <div class="slider-info">
+        <span class="current">01</span>
+        <div class="divider"></div>
+        <span class="total">04</span>
+      </div>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

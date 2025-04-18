@@ -1,0 +1,156 @@
+/* --- Base & Fonts --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f5f0;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- Header / Nav --- */
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 64px;
+}
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+.nav-left a {
+  margin-left: 24px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.menu-btn,
+.nav-right button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-right button {
+  margin-left: 24px;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+/* --- Hero Section --- */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 64px 64px;
+  position: relative;
+}
+.hero-text {
+  max-width: 40%;
+}
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #1a1a1a;
+  margin-bottom: 32px;
+}
+.text-block {
+  display: flex;
+  align-items: flex-start;
+}
+.small-image {
+  width: 200px;
+  border-radius: 8px;
+  margin-right: 40px;
+}
+.copy p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 24px;
+}
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border: 1px solid #bda27e;
+  border-radius: 4px;
+  color: #bda27e;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn:hover {
+  background-color: #bda27e;
+  color: #fff;
+}
+
+/* --- Hero Image & Controls --- */
+.hero-image {
+  position: relative;
+}
+.hero-image img {
+  width: 500px;
+  border-radius: 8px;
+}
+.arrow.next {
+  position: absolute;
+  top: 50%;
+  right: -32px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.arrow.next img {
+  width: 16px;
+  height: 16px;
+  filter: invert(1);
+}
+
+/* --- Slider Info & Dots --- */
+.slider-info {
+  position: absolute;
+  bottom: 80px;
+  right: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+.divider {
+  width: 40px;
+  height: 1px;
+  background: #ccc;
+  margin: 0 12px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 48px;
+  right: 80px;
+  display: flex;
+  gap: 8px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dot.active {
+  background: #333;
+}
