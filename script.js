@@ -1,9 +1,4 @@
-const smallImages = [
-  'images/roses-small.jpg',
-  'images/roses-small2.jpg',
-  'images/roses-small3.jpg',
-  'images/roses-small4.jpg'
-];
+// only the large slide images
 const largeImages = [
   'images/roses-large.jpg',
   'images/roses-large2.jpg',
@@ -12,37 +7,27 @@ const largeImages = [
 ];
 
 let slideIndex = 0;
-const total = largeImages.length;
-const currentEl = document.querySelector('.current');
-const dots = document.querySelectorAll('.dot');
-const smallImgEl = document.querySelector('.small-image');
 const largeImgEl = document.querySelector('.hero-image img');
 const nextBtn = document.querySelector('.arrow.next');
+const dots = document.querySelectorAll('.dot');
 
-function updateSlider() {
-  // update images
-  smallImgEl.src = smallImages[slideIndex];
+function updateLargeImage() {
   largeImgEl.src = largeImages[slideIndex];
-  // update numbers
-  currentEl.textContent =
-    slideIndex + 1 < 10 ? '0' + (slideIndex + 1) : slideIndex + 1;
-  // update dots
-  dots.forEach((d, i) => d.classList.toggle('active', i === slideIndex));
 }
 
-// next button
+// next button: advance the large image only
 nextBtn.addEventListener('click', () => {
-  slideIndex = (slideIndex + 1) % total;
-  updateSlider();
+  slideIndex = (slideIndex + 1) % largeImages.length;
+  updateLargeImage();
 });
 
-// clicking dots
-dots.forEach((dot, idx) =>
+// dot clicks: jump to that large image only
+dots.forEach((dot, idx) => {
   dot.addEventListener('click', () => {
     slideIndex = idx;
-    updateSlider();
-  })
-);
+    updateLargeImage();
+  });
+});
 
-// init
-updateSlider();
+// initialize
+updateLargeImage();
